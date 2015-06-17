@@ -34,7 +34,7 @@
 		var texture = gl.createTexture();
 		var img = new Image();
 		img.onload = function() {
-			gl.activeTexture(gl.TEXTURE0);
+			gl.activeTexture(gl.TEXTURE0);	//指定的纹理单位的编号和uniform1i函数的第二个参数中指定的整数值必须是一致
 			gl.bindTexture(gl.TEXTURE_2D, texture);
 			gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 			gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
